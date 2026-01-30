@@ -1,0 +1,8 @@
+def chunk(lst, size):
+    if size <= 0:
+        return None
+    return [lst[i:i+size] for i in range(0, len(lst), size)]
+
+# Тест
+print(chunk([1,2,3,4,5,6,7], 3))
+# → [[1,2,3],[4,5,6],[7]]
