@@ -1,0 +1,12 @@
+def flatten1(lst):
+    result = []
+    for v in lst:
+        if isinstance(v, list):
+            result.extend(v)
+        else:
+            result.append(v)
+    return result
+
+# Тест
+print(flatten1([1, [2,3], 4, [5,6]]))
+# → [1,2,3,4,5,6]
