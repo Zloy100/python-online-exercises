@@ -1,0 +1,14 @@
+def stats(nums):
+    if not nums:
+        return None
+    total = sum(nums)
+    return {
+        "min": min(nums),
+        "max": max(nums),
+        "avg": total / len(nums),
+        "sum": total
+    }
+
+# Тест
+print(stats([1,2,3,4,5]))
+# → {'min':1,'max':5,'avg':3.0,'sum':15}
