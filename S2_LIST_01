@@ -1,0 +1,12 @@
+def clean_numbers(values):
+    result = []
+    for v in values:
+        try:
+            result.append(float(v.strip()))
+        except (ValueError, AttributeError):
+            continue
+    return result
+
+# Тест
+print(clean_numbers([" 1 ", "x", "2", " 3.5 ", None, "abc"]))
+# Ожидаемый вывод: [1.0, 2.0, 3.5]
